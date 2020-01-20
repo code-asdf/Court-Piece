@@ -3,6 +3,7 @@ package lib;
 import java.util.ArrayList;
 
 public class Driver {
+
     private static CardDistributor cardDistributor;
     private static ArrayList cardsPlayed;
     private static ArrayList player1;
@@ -14,6 +15,7 @@ public class Driver {
     private static int team1GlobalScore;
     private static int team2GlobalScore;
     private static UserInterface userInterface;
+    //trump 0-S, 1-C, 2-H, 3-D
     private static int trump;
 
 
@@ -32,10 +34,10 @@ public class Driver {
         team1GlobalScore = 0;
         team2GlobalScore = 0;
         userInterface = new UserInterface();
+        int move = (int)(Math.random()*4);
         boolean continuePlay = true;
         while(continuePlay && Math.max(team1GlobalScore,team2GlobalScore)< utils.MAX_SCORE){
             generateCurrentBoard();
-            int move = (int)(Math.random()*4);
             if(move==0) {
                 userInterface.displayCards(player1.subList(0, 5));
                 trump = userInterface.getTrump();

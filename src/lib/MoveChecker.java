@@ -43,8 +43,11 @@ public class MoveChecker {
         }
     }
 
+    //trump 0-S, 1-C,2-H,3-D
     public static int getWinner(String moveP1,String moveP2,String moveP3,String moveP4,int move,int trump){
+
         //TODO
+
         return 0;
     }
 
