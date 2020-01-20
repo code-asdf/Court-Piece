@@ -24,4 +24,8 @@ public class UserInterface {
     public void putCardOnTable(String move){
         //TODO
     }
+
+    public void displayTrump(int trump){
+        //TODO
+    }
 }

@@ -4,7 +4,6 @@ import java.util.List;
 
 public class MoveChecker {
     public static boolean isValidMove(List<String> player,String move,String firstMove,List cardsPlayed) throws Exception{
-        //TODO
 
         if(!player.contains(move) || cardsPlayed.contains(move))
             throw new Exception("Illegal move");

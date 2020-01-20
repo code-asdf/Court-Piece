@@ -42,6 +42,9 @@ public class Driver {
             }else{
                 //TODO generate trump for bot
             }
+
+            userInterface.displayTrump(trump);
+
             //TODO if window is closed then exception handling
             userInterface.displayCards(player1);
             for(int i=0;i<13;i++){
