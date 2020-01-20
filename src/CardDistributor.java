@@ -6,7 +6,6 @@ public class CardDistributor {
 
     public CardDistributor(){
         cards = new ArrayList<>();
-        initializeCards();
     }
 
     public void initializeCards(){
@@ -15,12 +14,8 @@ public class CardDistributor {
         }
     }
 
-    public ArrayList<ArrayList<String>> generateCards() throws Exception{
-        ArrayList<String> player1 = new ArrayList<>(13);
-        ArrayList<String> player2 = new ArrayList<>(13);
-        ArrayList<String> player3 = new ArrayList<>(13);
-        ArrayList<String> player4 = new ArrayList<>(13);
-
+    public ArrayList<ArrayList<String>> generateCards(ArrayList player1,ArrayList player2,ArrayList player3,ArrayList player4) throws Exception{
+        initializeCards();
         if(cards.size()!=52){
             throw new Exception("Not enough cards");
         }
