@@ -1,3 +1,5 @@
+package lib;
+
 import java.util.List;
 
 public class UserInterface {
@@ -13,5 +15,13 @@ public class UserInterface {
     public String userMove(){
         //TODO
         return "";
+    }
+
+    public void displayWinner(int player){
+        //TODO
+    }
+
+    public void putCardOnTable(String move){
+        //TODO
     }
 }
