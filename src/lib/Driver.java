@@ -16,7 +16,7 @@ public class Driver {
     private static int team2GlobalScore;
     private static UserInterface userInterface;
     //trump 0-S, 1-C, 2-H, 3-D
-    private static int trump;
+    private static char trump;
 
 
     public static void generateCurrentBoard() throws Exception{

@@ -2,6 +2,8 @@ package lib;
 
 import java.util.List;
 
+import static lib.cardUtilFunc.cardComparator;
+
 public class MoveChecker {
     public static boolean isValidMove(List<String> player,String move,String firstMove,List cardsPlayed) throws Exception{
 
@@ -44,11 +46,18 @@ public class MoveChecker {
     }
 
     //trump 0-S, 1-C,2-H,3-D
-    public static int getWinner(String moveP1,String moveP2,String moveP3,String moveP4,int move,int trump){
+    public static int getWinner(String moveP1,String moveP2,String moveP3,String moveP4,int firstMove,char trump){
 
-        //TODO
+        int handWinner = firstMove;
+        String[] playerMoves = new String[]{moveP1, moveP2, moveP3, moveP4};
+        
+        for(int i=0;i<4;i++){
+            if(cardComparator(playerMoves[i], playerMoves[handWinner], trump)>0){
+                handWinner = i;
+            }
+        }
 
-        return 0;
+        return handWinner;
     }
 
 }

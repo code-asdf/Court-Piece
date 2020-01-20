@@ -7,7 +7,7 @@ public class UserInterface {
         //TODO
     }
 
-    public int getTrump(){
+    public char getTrump(){
         //TODO
         return 0;
     }
@@ -25,7 +25,7 @@ public class UserInterface {
         //TODO
     }
 
-    public void displayTrump(int trump){
+    public void displayTrump(char trump){
         //TODO
     }
 }
