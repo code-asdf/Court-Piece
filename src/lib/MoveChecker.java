@@ -52,7 +52,7 @@ public class MoveChecker {
         String[] playerMoves = new String[]{moveP1, moveP2, moveP3, moveP4};
         
         for(int i=0;i<4;i++){
-            if(cardComparator(playerMoves[i], playerMoves[handWinner], trump)>0){
+            if(cardComparator(playerMoves[i], playerMoves[handWinner], trump)){
                 handWinner = i;
             }
         }
