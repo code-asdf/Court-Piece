@@ -5,11 +5,11 @@ public class cardUtilFunc {
     // method to compare 2 cards
     // card1 => current card
     // card2 => winning card till now
-    // card1 > card2 => true   card2 > card1 => false
+    // @return card1 > card2 => true   card2 > card1 => false
     public static boolean cardComparator(String card1, String card2, char trump) {
 
-        char suit1 = card1.charAt(1);
-        char suit2 = card2.charAt(1);
+        char suit1 = card1.charAt(utils.SUIT_INDEX);
+        char suit2 = card2.charAt(utils.SUIT_INDEX);
         int value1 = cardValue(card1);
         int value2 = cardValue(card2);
 
@@ -25,7 +25,7 @@ public class cardUtilFunc {
     }
 
     public static int cardValue(String card){
-        switch (card.charAt(0)) {
+        switch (card.charAt(utils.FACE_INDEX)) {
             case 'A':
                 return 13;
             case 'K':
@@ -35,7 +35,7 @@ public class cardUtilFunc {
             case 'J': 
                 return 10;
             default:
-                return Character.getNumericValue(card.charAt(0));
+                return Character.getNumericValue(card.charAt(utils.FACE_INDEX));
         }
     }
 }
